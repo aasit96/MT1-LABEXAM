@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart Management System</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f3f5f9;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1f3a68;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin: 0 0 8px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    section {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #1f3a68;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background: #eef2fa;
+      border-radius: 6px;
+      padding: 15px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background: #1f3a68;
+      color: #fff;
+    }
+
+    .get {
+      color: #1b7f3b;
+      font-weight: bold;
+    }
+
+    .post {
+      color: #b36b00;
+      font-weight: bold;
+    }
+
+    .put {
+      color: #1a5fb4;
+      font-weight: bold;
+    }
+
+    .delete {
+      color: #c01c28;
+      font-weight: bold;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Shopping Cart Management System</h1>
+    <p>Welcome! This page is served by the native Node.js HTTP server using the FS module.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Project Description</h2>
+      <p>
+        A simple shopping cart application built to demonstrate the Node.js HTTP module,
+        the FS module, routing, Express.js and REST API CRUD operations.
+        Data is stored in JavaScript arrays (no database).
+      </p>
+    </section>
+
+    <section>
+      <h2>Features</h2>
+      <div class="grid">
+        <div class="card">Native HTTP server with routing</div>
+        <div class="card">HTML file served using fs.readFile()</div>
+        <div class="card">Express.js REST API</div>
+        <div class="card">Full CRUD operations</div>
+        <div class="card">JSON request and response handling</div>
+        <div class="card">Validation and error handling</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Servers</h2>
+      <div class="grid">
+        <div class="card"><strong>Native HTTP Server</strong><br>Port: 3000</div>
+        <div class="card"><strong>Express REST API</strong><br>Port: 4000</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Native HTTP Server Endpoints (Port 3000)</h2>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>Method</th>
+            <th>Endpoint</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td class="get">GET</td>
+            <td>/</td>
+            <td>Welcome page</td>
+          </tr>
+          <tr>
+            <td class="get">GET</td>
+            <td>/cart</td>
+            <td>All cart products (JSON)</td>
+          </tr>
+          <tr>
+            <td class="get">GET</td>
+            <td>/about</td>
+            <td>About the application</td>
+          </tr>
+          <tr>
+            <td class="get">GET</td>
+            <td>/home</td>
+            <td>This HTML page</td>
+          </tr>
+          <tr>
+            <td class="post">POST</td>
+            <td>/add-to-cart</td>
+            <td>Add a product to the cart</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Express REST API Endpoints (Port 4000)</h2>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>Method</th>
+            <th>Endpoint</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td class="get">GET</td>
+            <td>/cart</td>
+            <td>Get all products</td>
+          </tr>
+          <tr>
+            <td class="get">GET</td>
+            <td>/cart/:id</td>
+            <td>Get one product by ID</td>
+          </tr>
+          <tr>
+            <td class="post">POST</td>
+            <td>/cart</td>
+            <td>Add a new product</td>
+          </tr>
+          <tr>
+            <td class="put">PUT</td>
+            <td>/cart/:id</td>
+            <td>Update a product</td>
+          </tr>
+          <tr>
+            <td class="delete">DELETE</td>
+            <td>/cart/:id</td>
+            <td>Delete a product</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>Full Stack Development - MT1 Lab Examination</footer>
+</body>
+
+</html>
